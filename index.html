@@ -29,24 +29,29 @@
                 <input type="checkbox" name="survey_Netflix" checked="checked" value="1" id="s_keep"/>The Office should stay on Netflix<br><br>
                 <button onclick="func()">Submit</button>
             </form>
+
+            <p id="form_answer"></p>
         </div>
         
         <script>
             function func() {
                 var name = document.getElementById("s_name").value;
                 var watch = document.getElementsByClassName("s_watch").value;
+                var toPrint = "";
 
                 if (watch > 5) {
-                    document.write(name, " should watch The Office.")
+                    toPrint = " should watch The Office.";
                 }
                 else {
                     if (document.getElementById("s_keep").checked) {
-                        document.write(name, " watches The Office and thinks it should stay on Netflix.")
+                        toPrint = " watches The Office and thinks it should stay on Netflix.";
                     }
                     else {
-                        document.write(name, " watches The Office but is still crazy.")
+                        toPrint = " watches The Office but is still crazy.";
                     }
                 }
+
+                document.getElementById("form_answer").innerHTML = name + toPrint;
             }
         </script>
         
