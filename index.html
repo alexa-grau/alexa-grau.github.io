@@ -22,12 +22,12 @@
             <br>
 
             <div id="form_stuff">
-                <h3>Survey</h3>
+                <h3>Resume</h3>
                 <form>
-                    <input type="text" name="survey_name" value="Your Name" id="s_name"/><br><br>
-                    <input type="radio" name="survey_watch" value="1" class="s_watch"/>I watch The Office<br>
-                    <input type="radio" name="survey_watch" value="10" class="s_watch"/>I don't watch The Office<br><br>
-                    <input type="checkbox" name="survey_Netflix" checked="checked" value="1" id="s_keep"/>The Office should stay on Netflix<br><br>
+                    <input type="text" name="survey_name" value="Your Name"/><br><br>
+                    <input type="radio" name="survey_iX" value="y"/>I'm from iXperience<br>
+                    <input type="radio" name="survey_iX" value="n"/>I found this page randomly<br><br>
+                    <input type="checkbox" name="survey_resume" checked="checked" value="1" id="s_resume"/>Show me Alexa's resume!<br><br>
                     <button onclick="func()">Submit</button>
                 </form>
             </div>
@@ -37,23 +37,10 @@
         
         <script>
             function func() {
-                var name = document.getElementById("s_name").value;
-                var watch = document.getElementsByClassName("s_watch").value;
-                var toPrint;
-
-                if (watch > 5) {
-                    toPrint = " should watch The Office.";
+                if (document.getElementById("s_keep").checked) {
+                    window.location.replace("https://drive.google.com/file/d/1ljH4g6gOvu4B7yYD-BbSVFwNIDYFPiMG/view?usp=sharing");
                 }
-                else {
-                    if (document.getElementById("s_keep").checked) {
-                        toPrint = " watches The Office and thinks it should stay on Netflix.";
-                    }
-                    else {
-                        toPrint = " watches The Office but is still crazy.";
-                    }
-                }
-
-                document.getElementById("form_answer").innerHTML = name + toPrint;
+                else document.write("Refresh page and try again");
             }
         </script>
         
