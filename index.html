@@ -23,14 +23,32 @@
 
             <h2>Survey</h2>
             <form>
-                <input type="text" name="survey_name" value="Your Name"/><br><br>
-                <input type="radio" name="survey_watch" value="y"/>I watch The Office<br>
-                <input type="radio" name="survey_watch" value="n"/>I don't watch The Office<br><br>
-                <input type="checkbox" name="survey_Netflix" checked="checked" value="y"/>The Office should stay on Netflix<br><br>
-                <button>Submit</button>
+                <input type="text" name="survey_name" value="Your Name" id="s_name"/><br><br>
+                <input type="radio" name="survey_watch" value="1" class="s_watch"/>I watch The Office<br>
+                <input type="radio" name="survey_watch" value="10" class="s_watch"/>I don't watch The Office<br><br>
+                <input type="checkbox" name="survey_Netflix" checked="checked" value="1" id="s_keep"/>The Office should stay on Netflix<br><br>
+                <button onclick="func()">Submit</button>
             </form>
         </div>
         
+        <script>
+            function func() {
+                var name = document.getElementById("s_name").value;
+                var watch = document.getElementsByClassName("s_watch").value;
+
+                if (watch > 5) {
+                    document.write(name, " should watch The Office.")
+                }
+                else {
+                    if (document.getElementById("s_keep").checked) {
+                        document.write(name, "watches The Office and thinks it should stay on Netflix.")
+                    }
+                    else {
+                        document.write(name, "watches The Office but is still crazy.")
+                    }
+                }
+            }
+        </script>
         
         <div id="image">
             <img src="../img/IMG_2865.jpg" alt="Alexa profile picture" />
