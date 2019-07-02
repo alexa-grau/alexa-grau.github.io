@@ -1,7 +1,9 @@
 #text {
+    float: left;
     width: 75%
 }
 
 #image {
+    float: right;
     width: 25%
 }
