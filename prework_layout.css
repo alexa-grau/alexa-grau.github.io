@@ -11,3 +11,9 @@
 img {
     width: 100%
 }
+
+body{
+    background-color: #313e57;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}

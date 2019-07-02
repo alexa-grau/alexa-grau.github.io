@@ -3,6 +3,7 @@
     <head>
         <title>Alexa</title>
         <link href="prework_layout.css" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="text">
@@ -20,15 +21,16 @@
             </p>
             <br>
 
-
-            <h2>Survey</h2>
-            <form>
-                <input type="text" name="survey_name" value="Your Name" id="s_name"/><br><br>
-                <input type="radio" name="survey_watch" value="1" class="s_watch"/>I watch The Office<br>
-                <input type="radio" name="survey_watch" value="10" class="s_watch"/>I don't watch The Office<br><br>
-                <input type="checkbox" name="survey_Netflix" checked="checked" value="1" id="s_keep"/>The Office should stay on Netflix<br><br>
-                <button onclick="func()">Submit</button>
-            </form>
+            <div id="form_stuff"
+                <h2>Survey</h2>
+                <form>
+                    <input type="text" name="survey_name" value="Your Name" id="s_name"/><br><br>
+                    <input type="radio" name="survey_watch" value="1" class="s_watch"/>I watch The Office<br>
+                    <input type="radio" name="survey_watch" value="10" class="s_watch"/>I don't watch The Office<br><br>
+                    <input type="checkbox" name="survey_Netflix" checked="checked" value="1" id="s_keep"/>The Office should stay on Netflix<br><br>
+                    <button onclick="func()">Submit</button>
+                </form>
+            </div>
 
             <p id="form_answer"></p>
         </div>
